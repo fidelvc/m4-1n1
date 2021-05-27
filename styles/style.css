@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+    height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    place-content: center;
+    background-color: teal;
+}
+.box{
+    width: 500px;
+    height: 500px;
+    
+    position: absolute;
+    
+}
+
+
+.ball { 
+    height: 3rem;  
+    width: 3rem;   
+    border-radius: 50%;  
+    position: relative;    
+    
+    top: 100px;
+    left: 220px;
+    animation: bounce 0.9s 4;
+}
+
+@keyframes bounce{
+    10%{
+        height: 50px;
+        width: 50px;
+        
+    }
+    30%{
+        height: 50px;
+        width: 50px;
+        
+    }
+    50%{
+        height: 30px;
+        width: 57px;
+        
+        transform: translateY(240px) rotate(-240deg);
+    }
+    75%{
+        height: 50px;
+        width: 57px;
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.shadow {
+    background-color: rgba(0, 0, 0, 0.05);
+    height: 10px;
+    width: 65px;
+    border-radius: 50%;
+    position: relative;
+    top: 310px;
+    left: 212px;
+    z-index: 1;
+    animation: shrink 0.9s 4;
+}
+@keyframes shrink {
+    50%{
+        transform: scaleX(0.5)
+    }
+}
