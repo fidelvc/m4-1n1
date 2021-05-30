@@ -11,66 +11,57 @@ body{
     background-color: whitesmoke;
     display: flex;
     place-content: center;
+    place-items: center;
     background-color: teal;
 }
 .box{
     width: 500px;
     height: 500px;
-    
+    background-color: brown;
     position: absolute;
-    
 }
 
 
-.ball { 
+.ball {
     height: 3rem;  
     width: 3rem;   
     border-radius: 50%;  
-    position: relative;    
+    position: relative;
+    animation-name: dribble-ball;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
     
-    top: 100px;
-    left: 220px;
-    animation: bounce 0.9s 4;
 }
 
-@keyframes bounce{
+@keyframes dribble-ball {
     10%{
-        height: 50px;
-        width: 50px;
+        transform: translateY(450px) translateX(100px) rotate(120deg);
+        height: 2rem;
         
     }
-    30%{
-        height: 50px;
-        width: 50px;
-        
+    20%{
+        transform: translateY(90px) translateX(240px) rotate(240deg);
     }
-    50%{
-        height: 30px;
-        width: 57px;
-        
-        transform: translateY(240px) rotate(-240deg);
+    
+    30% {
+        transform: translateY(450px) translateX(380px) rotate(360deg);
     }
-    75%{
-        height: 50px;
-        width: 57px;
+    40% {
+        transform: translateY(150px) translateX(450px) rotate(480deg);
     }
-    100%{
-        transform: translateY(0px);
+    50% {
+        transform: translateY(0) translateX(300px) rotate(520deg);
     }
-}
-.shadow {
-    background-color: rgba(0, 0, 0, 0.05);
-    height: 10px;
-    width: 65px;
-    border-radius: 50%;
-    position: relative;
-    top: 310px;
-    left: 212px;
-    z-index: 1;
-    animation: shrink 0.9s 4;
-}
-@keyframes shrink {
-    50%{
-        transform: scaleX(0.5)
+    60% {
+        transform: translateY(450px) translateX(180px) rotate(320deg);
+    }
+    70% {
+        transform: translateY(0) translateX(90px) rotate(220deg);
+    }
+    80% {
+        transform: translateY(450px) translateX(50px) rotate(120deg);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
     }
 }
