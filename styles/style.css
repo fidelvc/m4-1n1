@@ -19,6 +19,7 @@ body{
     height: 500px;
     background-color: brown;
     position: absolute;
+    overflow: hidden;
 }
 
 
@@ -26,8 +27,38 @@ body{
     height: 3rem;  
     width: 3rem;   
     border-radius: 50%;  
-    position: relative;
-    
-    
+    position: absolute;    
 }
 
+.bounceX{
+    animation: bounceX 3.14s linear 0s infinite alternate;
+
+}
+.bounceY{
+    animation: bounceY 1.03s ease-in 0s infinite alternate;
+
+}
+@keyframes bounceX {
+    from {
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(450px);
+    }
+    
+}
+@keyframes bounceY {
+    from {
+        transform: translateY(20px);
+        height: 3rem;
+        width: 3rem;
+    }
+    to{
+        transform: translateY(450px) skewY(3deg);
+        border-radius: 50%;
+        box-shadow:inset 0 -3em 3em rgba(62, 9, 9, 0.1),
+        0.3em 0.3em 1em rgba(71, 13, 13, 0.3);
+        height: 3rem;
+        width: 4rem;
+    }
+}
