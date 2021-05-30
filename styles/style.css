@@ -27,41 +27,7 @@ body{
     width: 3rem;   
     border-radius: 50%;  
     position: relative;
-    animation-name: dribble-ball;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
+    
     
 }
 
-@keyframes dribble-ball {
-    10%{
-        transform: translateY(450px) translateX(100px) rotate(120deg);
-        height: 2rem;
-        
-    }
-    20%{
-        transform: translateY(90px) translateX(240px) rotate(240deg);
-    }
-    
-    30% {
-        transform: translateY(450px) translateX(380px) rotate(360deg);
-    }
-    40% {
-        transform: translateY(150px) translateX(450px) rotate(480deg);
-    }
-    50% {
-        transform: translateY(0) translateX(300px) rotate(520deg);
-    }
-    60% {
-        transform: translateY(450px) translateX(180px) rotate(320deg);
-    }
-    70% {
-        transform: translateY(0) translateX(90px) rotate(220deg);
-    }
-    80% {
-        transform: translateY(450px) translateX(50px) rotate(120deg);
-    }
-    100% {
-        transform: translateY(0) translateX(0);
-    }
-}
